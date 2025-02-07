@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Agent MEV Bot - Next-Gen DeFi Trading</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;700&family=Space+Mono&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --neon-purple: #6c40fc;
+            --deep-space: #0a0818;
+            --quantum-blue: #00f3ff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(45deg, #1a0a2e, #0a0818);
+            color: white;
+            min-height: 100vh;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 5%;
+            background: rgba(10, 8, 24, 0.9);
+            position: fixed;
+            width: 100%;
+            z-index: 100;
+        }
+
+        .logo {
+            width: 100px; /* Reduced logo width */
+            height: auto; /* Maintain aspect ratio */
+        }
+
+        .connect-btn {
+            background: linear-gradient(90deg, var(--neon-purple), var(--quantum-blue));
+            padding: 12px 24px;
+            border-radius: 8px;
+            border: none;
+            color: white;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .hero {
+            position: relative;
+            padding: 140px 5% 60px; /* Increased top padding to accommodate fixed nav */
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .hero h1 {
+            position: relative;
+            z-index: 1;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            background: linear-gradient(90deg, #6c40fc, #00f3ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1.2;
+        }
+
+        .hero img {
+            position: relative; /* Changed from absolute to relative */
+            width: 100%;
+            height: auto; /* Maintain aspect ratio of the banner */
+            z-index: 0; /* Send the image behind the text */
+        }
+
+        .content-section {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .section-heading {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            background: linear-gradient(90deg, #6c40fc, #00f3ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .strategy-list {
+            list-style: none;
+            padding: 0;
+            margin: 0 auto;
+            max-width: 800px;
+        }
+
+        .strategy-list li {
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            text-align: left;
+        }
+
+        .transaction-grid {
+            display: grid;
+            gap: 1.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            margin: 2rem auto;
+            max-width: 1200px;
+        }
+
+        .transaction-card {
+            background: rgba(108, 64, 252, 0.1);
+            padding: 1.5rem;
+            border-radius: 12px;
+            text-align: left;
+        }
+
+        .recommended-action {
+            border-left: 4px solid var(--quantum-blue);
+            padding: 1.5rem;
+            margin: 2rem auto;
+            max-width: 800px;
+            background: rgba(0, 243, 255, 0.1);
+            text-align: left;
+        }
+
+        .caution-note {
+            border: 2px solid #ff4d4d;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 2rem auto;
+            max-width: 800px;
+            background: rgba(255, 77, 77, 0.1);
+            text-align: left;
+        }
+
+        footer {
+            padding: 2rem 5%;
+            text-align: center;
+            background: rgba(10, 8, 24, 0.9);
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .section-heading {
+                font-size: 1.75rem;
+            }
+
+            .strategy-list li {
+                padding: 1rem;
+            }
+
+            .transaction-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .nav {
+                padding: 1rem;
+            }
+
+            .logo {
+                width: 80px; /* Adjust logo size for smaller screens */
+            }
+
+            .connect-btn {
+                padding: 10px 20px;
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 1.75rem;
+            }
+
+            .section-heading {
+                font-size: 1.5rem;
+            }
+
+            .content-section {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="nav">
+        <a href="https://imgbb.com/">
+            <img src="https://i.ibb.co/TMcMstPc/logo.png" alt="MEV Bot Logo" class="logo">
+        </a>
+        <button class="connect-btn">Connect Wallet</button>
+    </nav>
+
+    <div class="hero">
+        <h1>AI-Powered MEV Trading Engine</h1>
+        <a href="https://ibb.co/V0TPnfsn">
+            <img src="https://i.ibb.co/GfRbYzqY/banner.png" alt="banner" class="hero-banner">
+        </a>
+    <main class="content-section">
+        <h2 class="section-heading">Project Overview</h2>
+        <p>The AI Agent MEV Bot capitalizes on market inefficiencies through arbitrage, sandwich attacks, and liquidation strategies by continuously monitoring liquidity pools.</p>
+
+        <h2 class="section-heading">Strategy Identification</h2>
+        <ul class="strategy-list">
+            <li>
+                <strong>Arbitrage between WETH-TAO on SushiSwap/Uniswap</strong>
+                <p style="margin-top: 1rem; color: #00f3ff;">Key Factors:</p>
+                <p>• SushiSwap: High buy-side liquidity<br>
+                • Uniswap: TAO oversupply<br>
+                • 1.25% spread opportunity</p>
+            </li>
+        </ul>
+ 
+        <h2 class="section-heading">Live Transactions</h2>
+        <div class="transaction-grid">
+            <div class="transaction-card">
+                <p><span style="color: #00f3ff;">Pool:</span> SushiSwap WETH-TAO</p>
+                <p><span style="color: #00f3ff;">Buy:</span> 10 WETH @ 0.0055 TAO/WETH</p>
+                <p><span style="color: #00f3ff;">Sell:</span> 10 TAO @ 0.0058 WETH/TAO</p>
+                <p><span style="color: #00f3ff;">Profit:</span> 0.003 WETH (0.55%)</p>
+            </div>
+            <!-- Add other transaction cards -->
+        </div>
+
+        <div class="recommended-action">
+            <h3>Recommended Trade</h3>
+            <p>Buy 15 WETH @ 0.0056 TAO/WETH (SushiSwap)<br>
+            Sell 15 TAO @ 0.0059 WETH/TAO (Uniswap)</p>
+            <p style="color: #00f3ff; margin-top: 1rem;">Expected Profit: 0.0045 WETH (0.90%)</p>
+        </div>
+        
+        <div class="video-demo">
+            <div style="position:relative; width:100%; height:0px; padding-bottom:56.227%">
+                <iframe allow="fullscreen;autoplay" allowfullscreen height="100%" src="https://streamable.com/e/iitxde?autoplay=1" width="100%" style="border:none; width:100%; height:100%; position:absolute; left:0px; top:0px; overflow:hidden;"></iframe>
+            </div>
+        </div>
+
+        <div class="caution-note">
+            <h3>Important Notice</h3>
+            <p>This is a simulated example. Actual trading requires careful risk assessment and market analysis.</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 AI Agent MEV Bot</p>
+        <div style="margin-top: 1.5rem;">
+            <a href="#" style="color: #00f3ff; margin: 0 1rem;">Documentation</a>
+            <a href="#" style="color: #00f3ff; margin: 0 1rem;">GitHub</a>
+        </div>
+    </footer>
+</body>
+</html>
